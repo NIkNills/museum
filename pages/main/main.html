@@ -227,10 +227,10 @@
                 <div class="buy-tickets__content">
                     <img src="/assets/images/Rectangle7.png" alt="Buy tickets image">
                     <div class="buy-tickets__forms">
-                        <form class="type" action="#" method="post">
+                        <form class="type" name="type" action="#" method="post">
                             <fieldset>
                                 <legend>Ticket type</legend>
-                                <input class="type-input" type="radio" id="permanent" name="tickets" value="Permanent exhibition">
+                                <input class="type-input" type="radio" id="permanent" name="tickets" value="Permanent exhibition" checked>
                                 <label class="type-label" for="permanent">Permanent exhibition</label>
                                 <input class="type-input" type="radio" id="temporary" name="tickets" value="Temporary exhibition">
                                 <label class="type-label" for="temporary">Temporary exhibition</label>
@@ -238,24 +238,24 @@
                                 <label class="type-label" for="combined">Combined Admission</label>
                             </fieldset>
                         </form>
-                        <form class="amount" action="#" method="post">
+                        <form class="amount" name="amount" action="#" method="post">
                             <fieldset>
                                 <legend class="amount__legend">Amount</legend>
                                 <label class="amount__label" for="basic">Basic 18+</label>
                                 <div class="number">
-                                    <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                    <input class="amount__input" type="number" step="1" min="0" id="basic" name="amount" value="0" required>
-                                    <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+                                    <button class="btn-dec" id="basic-btn-dec" type="button">-</button>
+                                    <input class="amount__input" type="number" step="1" min="0" id="basic-input" name="number" value="0" required>
+                                    <button class="btn-inc" id="basic-btn-inc" type="button">+</button>
                                 </div>
                                 <label class="amount__label" for="senior">Senior 65+</label>
                                 <div class="number">
-                                    <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                                    <input class="amount__input" type="number" step="1" min="0" id="senior" name="amount" value="0" required>
-                                    <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+                                    <button class="btn-dec" id="senior-btn-dec" type="button">-</button>
+                                    <input class="amount__input" type="number" step="1" min="0" id="senior-input" name="number" value="0" required>
+                                    <button class="btn-inc" id="senior-btn-inc" type="button">+</button>
                                 </div>
                                 <p class="amount__total">Total &#8364 220</p>
                             </fieldset>
-                            <input class="btn amount__submit" type="submit" value="Buy Now">
+                            <button class="btn amount__submit" id="buy-now-btn" type="button">Buy Now</button>
                         </form>
                     </div>
                 </div>
@@ -339,5 +339,7 @@
             </div>
         </section>
     </footer>
+
+    <script src="./main.js"></script>
 </body>
 </html>
