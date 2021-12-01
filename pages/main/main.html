@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/pages/main/main.css">
     <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
     <title>Louvre</title>
@@ -13,8 +14,8 @@
 
     <header>
         <div class="container header__container">
-                <div class="logo">
-                    <img src="/assets/icons/Frame.svg" alt="icon">
+            <div class="logo">
+                <img src="/assets/icons/Frame.svg" alt="icon">
                     <a href="#" class="link logo__link">Louvre</a>
                 </div>
                 <nav class="nav">
@@ -46,6 +47,7 @@
                         </li>
                     </ul>
                 </nav>
+            </div>    
         </div>
     </header>
 
@@ -57,22 +59,33 @@
                     <p class="subtitle subtitle_l welcome__subtitle">From the castle to the museum</p>
                     <button class="btn welcome__btn" type="button">Discover the Louvre</button>
                 </div>
-                <div class="slider">
-                    <div class="slider__pages">
-                        <span class="slider__page">01</span>
-                        <span class="slider__page">|</span>
-                        <span class="slider__page">05</span>
+                <div class="welcome-swiper">>
+                    <div class="welcome-swiper__wrapper">
+                        <div class="welcome-swiper__slide">
+                            <img class="welcome-swiper__img" src="/assets/images/1.png" alt="Picture explore">
+                        </div>
+                        <div class="welcome-swiper__slide">
+                            <img class="welcome-swiper__img" src="/assets/images/1.png" alt="Picture explore">
+                        </div>
+                        <div class="welcome-swiper__slide">
+                            <img class="welcome-swiper__img" src="/assets/images/1.png" alt="Picture explore">
+                        </div>
+                        <div class="welcome-swiper__slide">
+                            <img class="welcome-swiper__img" src="/assets/images/1.png" alt="Picture explore">
+                        </div>
+                        <div class="welcome-swiper__slide">
+                            <img class="welcome-swiper__img" src="/assets/images/1.png" alt="Picture explore">
+                        </div>
                     </div>
-                    <div class="slider__thumbs">
-                        <div class="slider__thumb slider__thumb_active"></div>
-                        <div class="slider__thumb"></div>
-                        <div class="slider__thumb"></div>
-                        <div class="slider__thumb"></div>
-                        <div class="slider__thumb"></div>
-                    </div>
-                    <div class="slider__buttons">
-                        <button class="slider__btn">&#8592</button>
-                        <button class="slider__btn">&#8594</button>
+                    <div class="welcome-swiper__navigation">
+                        <div class="welcome-swiper__pages">
+                            <span class="welcome-swiper__page">|</span>
+                        </div>
+                        <div class="welcome-swiper__pagination"></div>
+                        <div class="welcome-swiper__buttons">
+                            <div class="welcome-swiper__btn-prev"></div>
+                            <div class="welcome-swiper__btn-next"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -160,40 +173,201 @@
                         masterpieces such as Mona Lisa or Hammurabi's Code
                     </p>
                 </div>
-                <div class="video">
-                    <iframe width="1440" height="735" src="https://www.youtube.com/embed/U-DOGB4iVBM" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                    </iframe>
-                    <iframe width="452" height="254" src="https://www.youtube.com/embed/6vuFh6NNa70" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                    </iframe>
-                    <iframe width="452" height="254" src="https://www.youtube.com/embed/JkPcA8dngB4" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                    </iframe>
-                    <iframe width="452" height="254" src="https://www.youtube.com/embed/MufP60vnLnU" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="journey-slider">
-                    <button class="journey-slider__item slider__btn journey-slider__btn">&#171</button>
-                    <span class="journey-slider__item marker marker_active">&#8226;</span>
-                    <span class="journey-slider__item marker">&#8226;</span>
-                    <span class="journey-slider__item marker">&#8226;</span>
-                    <span class="journey-slider__item marker">&#8226;</span>
-                    <span class="journey-slider__item marker">&#8226;</span>
-                    <button class="journey-slider__item slider__btn journey-slider__btn">&#187</button>
+                <div class="video-journey__swiper">
+                    <div class="video-swiper_xl">
+                        <div class="video-swiper__wrapper">
+                             <div class="video-swiper__slide video-swiper__slide_xl">
+                                <iframe data-src="https://www.youtube.com/embed/U-DOGB4iVBM" 
+                                    class="swiper-lazy video_xl"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_xl">
+                                <iframe data-src="https://www.youtube.com/embed/U-DOGB4iVBM" 
+                                    class="swiper-lazy video_xl"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_xl">
+                                <iframe data-src="https://www.youtube.com/embed/U-DOGB4iVBM" 
+                                    class="swiper-lazy video_xl"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_xl">
+                                <iframe data-src="https://www.youtube.com/embed/U-DOGB4iVBM" 
+                                    class="swiper-lazy video_xl"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_xl">
+                                <iframe data-src="https://www.youtube.com/embed/U-DOGB4iVBM" 
+                                    class="swiper-lazy video_xl"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-swiper_s">
+                        <div class="video-swiper__wrapper">
+                             <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/6vuFh6NNa70" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/JkPcA8dngB4" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/MufP60vnLnU" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/6vuFh6NNa70" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/JkPcA8dngB4" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/MufP60vnLnU" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/6vuFh6NNa70" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/JkPcA8dngB4" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/MufP60vnLnU" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/6vuFh6NNa70" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/JkPcA8dngB4" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/MufP60vnLnU" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/6vuFh6NNa70" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/JkPcA8dngB4" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-swiper__slide video-swiper__slide_s">
+                                <iframe data-src="https://www.youtube.com/embed/MufP60vnLnU" 
+                                    class="swiper-lazy video_s"
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="video-swiper__navigation">
+                            <div class="video-swiper__btn-prev"></div>
+                            <div class="video-swiper__pagination"></div>                
+                            <div class="video-swiper__btn-next"></div>
+                        </div>
+                    </div>                 
                 </div>
             </div>
         </section>
@@ -326,7 +500,6 @@
                 </div>
             </div>
         </div>
-
         <hr class="line footer__line">
 
         <section class="copyright">
@@ -338,8 +511,11 @@
                 </address>
             </div>
         </section>
+        
     </footer>
 
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="./main.js"></script>
+
 </body>
 </html>
